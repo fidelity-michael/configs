@@ -1,0 +1,7 @@
+reload("user.options")
+reload("user.plugins")
+reload("user.lsp")
+reload("user.dap_configurations")
+reload("user.keymaps")
+reload("user.which-key")
+reload("user.colors")
