@@ -9,6 +9,11 @@ keymap("i","<A-a>","<ESC>A",opts)
 --vim.keymap.set()
 
 --NORMAL
-keymap("n","<C-x>","<C-w>x",opts)
+keymap("n","<C-x>", "<C-w>x",opts)
 keymap("n", "<A-s>", ":LspOverloadsSignature<CR>", opts)
 
+keymap("n", "<C-d>","<C-d>zz",opts)
+keymap("n", "<C-u>","<C-u>zz",opts)
+
+
+keymap("v", "<leader>p","\"_dP")

@@ -22,7 +22,12 @@ lvim.colorscheme = "onedark" ]]
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.autowriteall = true
-Colors()
+
+-- Time it takes for which-key to open
+vim.opt.timeoutlen = 300
+if vim.g.neovide then
+  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h11"
+end
 
 vim.cmd([[
   autocmd FocusLost * silent! w

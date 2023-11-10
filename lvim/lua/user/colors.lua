@@ -1,8 +1,7 @@
 function Colors(color)
-  color = color or "kanagawa"
-  -- vim.cmd.colorscheme(color)
+  color = color or "onedark"
   lvim.colorscheme = color
-  lvim.transparent_window = true
+  -- lvim.transparent_window = true
 end
 
 Colors()
