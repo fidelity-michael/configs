@@ -2,7 +2,7 @@ require("user.functions")
 
 lvim.builtin.which_key.mappings["t"] = {
   name = "Theme",
-  s = { "<cmd>lua Change_bg()<CR>", "Change Theme" }
+  s = { "<cmd>lua Swap_themes()<CR>", "Change Theme" }
 }
 
 -- Leaderkey is included thus it's a mapping for <leader>sw

@@ -8,7 +8,7 @@ lvim.leader = "space"
 require("nvim-surround").setup()
 require("lsp-overloads").setup()
 require('nvim-ts-autotag').setup()
-
+-- require('neoscroll').setup()
 --[[ require('onedark').setup {
     style = 'dark',
     toggle_style_key = "<leader>ts", -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "{leader}ts"
@@ -26,7 +26,11 @@ vim.opt.autowriteall = true
 -- Time it takes for which-key to open
 vim.opt.timeoutlen = 300
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h11"
+  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h10"
+  vim.g.neovide_refresh_rate = 120
+  vim.g.neovide_refresh_rate_idle = 5
+  vim.g.neovide_fullscreen = true
+  vim.g.neovide_hide_mouse_when_typing = true
 end
 
 vim.cmd([[

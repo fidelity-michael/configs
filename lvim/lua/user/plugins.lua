@@ -13,9 +13,6 @@ lvim.plugins = {
     "sindrets/diffview.nvim",
   },
   {
-    "karb94/neoscroll.nvim",
-  },
-  {
     "Issafalcon/lsp-overloads.nvim",
   },
   {
@@ -42,5 +39,8 @@ lvim.plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     }
-  }
+  },
+  {
+    "catppuccin/nvim",
+  },
 }
