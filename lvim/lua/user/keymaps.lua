@@ -15,5 +15,4 @@ keymap("n", "<A-s>", ":LspOverloadsSignature<CR>", opts)
 keymap("n", "<C-d>","<C-d>zz",opts)
 keymap("n", "<C-u>","<C-u>zz",opts)
 
-
-keymap("v", "<leader>p","\"_dP")
+-- keymap("v", "<leader>p","\"_dP")

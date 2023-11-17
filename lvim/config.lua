@@ -1,4 +1,5 @@
 reload("user.options")
+reload("user.neovide")
 reload("user.plugins")
 reload("user.lsp")
 reload("user.dap_configurations")

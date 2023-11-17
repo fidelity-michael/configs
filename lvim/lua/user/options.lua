@@ -25,13 +25,6 @@ vim.opt.autowriteall = true
 
 -- Time it takes for which-key to open
 vim.opt.timeoutlen = 300
-if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h10"
-  vim.g.neovide_refresh_rate = 120
-  vim.g.neovide_refresh_rate_idle = 5
-  vim.g.neovide_fullscreen = true
-  vim.g.neovide_hide_mouse_when_typing = true
-end
 
 vim.cmd([[
   autocmd FocusLost * silent! w
@@ -71,3 +64,11 @@ formatters.setup { { name = "black" }, }
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup { { command = "flake8", args = { "--ignore=E203" }, filetypes = { "python" } } }
 
+local function set_terminal_keymaps()
+                local map = vim.api.nvim_buf_set_keymap
+                local map_opts = {
+                    noremap = true,
+                }
+                map(0, "t", "<esc>", [[<C-\><C-n>]], map_opts)
+            end
+            vim.api.nvim_create_autocmd("TermOpen", { pattern = "term://*", callback = set_terminal_keymaps })

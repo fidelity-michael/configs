@@ -43,4 +43,7 @@ lvim.plugins = {
   {
     "catppuccin/nvim",
   },
+  {
+    "themaxmarchuk/tailwindcss-colors.nvim",
+  }
 }
