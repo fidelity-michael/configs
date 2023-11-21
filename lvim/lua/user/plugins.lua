@@ -45,5 +45,8 @@ lvim.plugins = {
   },
   {
     "themaxmarchuk/tailwindcss-colors.nvim",
+  },
+  {
+    "BurntSushi/ripgrep",
   }
 }

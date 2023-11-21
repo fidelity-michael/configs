@@ -1,9 +1,11 @@
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h9"
+  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h10"
   vim.g.neovide_refresh_rate = 120
   vim.g.neovide_refresh_rate_idle = 5
   vim.g.neovide_fullscreen = true
   vim.g.neovide_hide_mouse_when_typing = true
+  -- vim.g.neovide_transparency = 0.5
+  -- vim.g.transparency = 0.5
 
   vim.keymap.set('n', '<D-s>', ':w<CR>') -- Save
   vim.keymap.set('v', '<D-c>', '"+y') -- Copy
@@ -15,20 +17,24 @@ if vim.g.neovide then
   vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true})
   vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true})
   vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true})
+
+  -- Fullscreen keymap
+  vim.keymap.set("n", "<C-F>", function()
+    vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
+  end)
+
+  -- Scaling keymaps
+  vim.g.neovide_scale_factor = 1.0
+  local change_scale_factor = function(delta)
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+  end
+  vim.keymap.set("n", "<C-=>", function()
+    change_scale_factor(1.25)
+  end)
+  vim.keymap.set("n", "<C-->", function()
+    change_scale_factor(1/1.25)
+  end)
+
 end
 
 
-vim.keymap.set("n", "<C-F>", function()
-  vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
-end)
-
-vim.g.neovide_scale_factor = 1.0
-local change_scale_factor = function(delta)
-  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
-end
-vim.keymap.set("n", "<C-=>", function()
-  change_scale_factor(1.25)
-end)
-vim.keymap.set("n", "<C-->", function()
-  change_scale_factor(1/1.25)
-end)
