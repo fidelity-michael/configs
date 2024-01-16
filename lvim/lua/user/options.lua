@@ -59,20 +59,28 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- Formatting in Python
 local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup { { name = "black" }, }
+formatters.setup { { name = "black" } }
 
 -- Flake setup
 local linters = require "lvim.lsp.null-ls.linters"
-linters.setup { { command = "flake8", args = { "--ignore=E203" }, filetypes = { "python" } } }
+linters.setup {
+  { command = "flake8", args = { "--ignore=E203" }, filetypes = { "python" } },
+  -- { command = "cpplint", filetypes = { "c", "cpp" } }
+}
+
+lvim.format_on_save = false
+-- On certain files format on save
+-- lvim.format_on_save.pattern = { "*.lua", "*.py" }
+
 
 local function set_terminal_keymaps()
-                local map = vim.api.nvim_buf_set_keymap
-                local map_opts = {
-                    noremap = true,
-                }
-                map(0, "t", "<esc>", [[<C-\><C-n>]], map_opts)
-            end
-            vim.api.nvim_create_autocmd("TermOpen", { pattern = "term://*", callback = set_terminal_keymaps })
+  local map = vim.api.nvim_buf_set_keymap
+  local map_opts = {
+    noremap = true,
+  }
+  map(0, "t", "<esc>", [[<C-\><C-n>]], map_opts)
+end
+vim.api.nvim_create_autocmd("TermOpen", { pattern = "term://*", callback = set_terminal_keymaps })
 
 --[[ require 'lspconfig'['pylsp'].setup {
   -- on_attach = "on_attach",

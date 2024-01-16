@@ -17,4 +17,5 @@ keymap("n", "<C-u>","<C-u>zz",opts)
 
 -- keymap("v", "<leader>p","\"_dP")
 
+-- Paste word from last yank in register 0, to word under cursor
 keymap("n", "<A-p>","ciw<C-r>0<ESC>",opts)
