@@ -56,6 +56,7 @@ lvim.builtin.treesitter.ensure_installed = {
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
+lvim.builtin.dap.active = true
 
 -- Formatting in Python
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -80,35 +81,5 @@ local function set_terminal_keymaps()
   }
   map(0, "t", "<esc>", [[<C-\><C-n>]], map_opts)
 end
-vim.api.nvim_create_autocmd("TermOpen", { pattern = "term://*", callback = set_terminal_keymaps })
 
---[[ require 'lspconfig'['pylsp'].setup {
-  -- on_attach = "on_attach",
-  filetypes = { 'python' },
-  settings = {
-    configurationSources = { "flake8" },
-    formatCommand = { "black" },
-    pylsp = {
-      plugins = {
-        -- jedi_completion = {fuzzy = true},
-        -- jedi_completion = {eager=true},
-        jedi_completion = {
-          include_params = true,
-        },
-        jedi_signature_help = { enabled = true },
-        jedi = {
-          extra_paths = { '~/projects/work_odoo/odoo14', '~/projects/work_odoo/odoo14' },
-          -- environment = {"odoo"},
-        },
-        pyflakes = { enabled = true },
-        -- pylint = {args = {'--ignore=E501,E231', '-'}, enabled=true, debounce=200},
-        pylsp_mypy = { enabled = false },
-        pycodestyle = {
-          enabled = true,
-          ignore = { 'E501', 'E231' },
-          maxLineLength = 120 },
-        yapf = { enabled = true }
-      }
-    }
-  }
-} ]]
+vim.api.nvim_create_autocmd("TermOpen", { pattern = "term://*", callback = set_terminal_keymaps })
