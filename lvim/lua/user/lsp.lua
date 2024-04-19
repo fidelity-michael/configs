@@ -5,25 +5,24 @@ lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(serve
   return server ~= "jedi_language_server"
 end, lvim.lsp.automatic_configuration.skipped_servers)
 
-local util = require 'lspconfig.util'
+-- local util = require 'lspconfig.util'
+-- return {
+--   default_config = {
+--     cmd = { 'typst-lsp' },
+--     filetypes = { 'typst' },
+--     single_file_support = true,
+--     root_dir = function(fname)
+--       return util.find_git_ancestor(fname)
+--     end,
+--   },
+--   docs = {
+--     description = [[
+--       https://github.com/nvarner/typst-lsp
 
-return {
-  default_config = {
-    cmd = { 'typst-lsp' },
-    filetypes = { 'typst' },
-    single_file_support = true,
-    root_dir = function(fname)
-      return util.find_git_ancestor(fname)
-    end,
-  },
-  docs = {
-    description = [[
-      https://github.com/nvarner/typst-lsp
-
-      Language server for Typst.
-    ]],
-  },
-}
+--       Language server for Typst.
+--     ]],
+--   },
+-- }
 
 --[[ lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
   return server ~= "pylsp"

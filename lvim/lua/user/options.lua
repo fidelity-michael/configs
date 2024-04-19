@@ -8,6 +8,9 @@ lvim.leader = "space"
 require("nvim-surround").setup()
 require("lsp-overloads").setup()
 require('nvim-ts-autotag').setup()
+-- require('lspconfig').typst_lsp.setup()
+-- require('typst_lsp').setup()
+
 -- require('neoscroll').setup()
 --[[ require('onedark').setup {
     style = 'dark',
@@ -22,6 +25,7 @@ lvim.colorscheme = "onedark" ]]
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.autowriteall = true
+vim.opt.ar = true
 
 -- Time it takes for which-key to open
 vim.opt.timeoutlen = 300

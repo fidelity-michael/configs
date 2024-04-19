@@ -48,5 +48,8 @@ lvim.plugins = {
   },
   {
     "BurntSushi/ripgrep",
+  },
+  {
+    "github/copilot.vim",
   }
 }
