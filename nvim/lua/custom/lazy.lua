@@ -177,12 +177,12 @@ require('lazy').setup({
 	{ 'nvim-neotest/nvim-nio' },
 	{ 's1n7ax/nvim-window-picker' },
 	{
-		'm4xshen/autoclose.nvim',
-		config = function()
-			require('neo-tree').setup {}
-		end,
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		config = true
+		-- use opts = {} for passing setup options
+		-- this is equalent to setup({}) function
 	},
-
 
 	-- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
 	--       These are some example plugins that I've included in the kickstart repository.
