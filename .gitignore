@@ -1,0 +1,7 @@
+# Ignore all files
+*
+
+# Unignore specific files
+!.gitignore
+!/lvim
+!/nvim
