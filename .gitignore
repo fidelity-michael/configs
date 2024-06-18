@@ -3,5 +3,5 @@
 
 # Unignore specific files
 !.gitignore
-!/lvim
-!/nvim
+!/lvim/
+!/nvim/
