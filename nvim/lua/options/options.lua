@@ -15,6 +15,12 @@ vim.o.hlsearch = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- Set the number of spaces that a <Tab> counts for while editing
+vim.o.softtabstop = 4
+
+-- Make tabbing smarter (will use shiftwidths when possible)
+vim.o.smarttab = true
+
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
