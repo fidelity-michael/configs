@@ -43,9 +43,9 @@ P.S. You can delete this when you're done too. It's your config now :)
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 
 require('options.options')
-require('keymaps.keymaps')
 require('custom.lazy')
-require('telescope.telesope')
+require('telescope.telescope')
+require('keymaps.keymaps')
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
