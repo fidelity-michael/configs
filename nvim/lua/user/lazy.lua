@@ -111,19 +111,19 @@ require('lazy').setup({
 	-- 		vim.cmd.colorscheme 'onedark'
 	-- 	end,
 	-- },
-	{
-		-- Set lualine as statusline
-		'nvim-lualine/lualine.nvim',
-		-- See `:help lualine.txt`
-		opts = {
-			options = {
-				icons_enabled = false,
-				theme = 'onedark',
-				component_separators = '|',
-				section_separators = '',
-			},
-		},
-	},
+	-- {
+	-- 	-- Set lualine as statusline
+	-- 	'nvim-lualine/lualine.nvim',
+	-- 	-- See `:help lualine.txt`
+	-- 	opts = {
+	-- 		options = {
+	-- 			icons_enabled = false,
+	-- 			theme = 'onedark',
+	-- 			component_separators = '|',
+	-- 			section_separators = '',
+	-- 		},
+	-- 	},
+	-- },
 
 	{
 		-- Add indentation guides even on blank lines
@@ -169,7 +169,6 @@ require('lazy').setup({
 
 	{ 'kaarmu/typst.vim' },
 	{ 'chomosuke/typst-preview.nvim' },
-	{ 'nvim-tree/nvim-tree.lua' },
 	{ 'nvim-neotest/nvim-nio' },
 	{ 's1n7ax/nvim-window-picker' },
 	{
@@ -192,5 +191,5 @@ require('lazy').setup({
 	--    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--
 	--    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-	{ import = 'custom.plugins' },
+	{ import = 'user.plugins' },
 }, {})
