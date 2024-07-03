@@ -9,4 +9,5 @@ require('which-key').register {
   ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
   ['<leader>e'] = { name = 'File tree', _ = 'which_key_ignore' },
   ['<leader>x'] = { name = 'Diagnostics', _ = 'which_key_ignore' },
+  ['<leader>l'] = { name = 'Lsp', _ = 'which_key_ignore' },
 }
