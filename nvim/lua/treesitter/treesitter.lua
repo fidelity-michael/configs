@@ -1,3 +1,4 @@
+-- TODO: Fix treesitter
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 -- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'

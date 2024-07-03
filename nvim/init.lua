@@ -1,8 +1,6 @@
-require('options.options')
-require('user.lazy')
-require('telescope.telescope')
-require('keymaps.init')
-require('treesitter.treesitter')
-require('lsp.lsp')
-require('lsp.mason')
-require('options.cmp')
+require 'options.options'
+require 'user.lazy'
+require 'telescope.telescope'
+require 'keymaps.init'
+require 'treesitter.treesitter'
+require 'options.cmp'
