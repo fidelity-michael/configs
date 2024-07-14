@@ -18,4 +18,11 @@ keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '
 keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
-keymap.set("n", "<leader>st", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+keymap.set('n', '<leader>st', '<cmd>TodoTelescope<cr>', { desc = 'Find todos' })
+
+-- Function to call the colorscheme picker with a preview
+function PickColorScheme()
+  require('telescope.builtin').colorscheme { enable_preview = true }
+end
+
+vim.keymap.set('n', '<leader>tc', ':lua PickColorScheme()<CR>', { desc = 'Pick colorscheme'})

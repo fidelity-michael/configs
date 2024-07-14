@@ -1,5 +1,5 @@
-require('keymaps.buffer')
-require('keymaps.basic')
-require('keymaps.telescope')
-require('keymaps.theme')
-require('keymaps.which-key')
+require 'keymaps.buffer'
+require 'keymaps.basic'
+require 'keymaps.telescope'
+require 'keymaps.theme'
+require 'keymaps.which-key'

@@ -1,11 +1,11 @@
 -- document existing key chains
 require('which-key').register {
-  ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-  ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-  -- ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
+  ['<leader>c'] = { name = 'Code', _ = 'which_key_ignore' },
+  ['<leader>d'] = { name = 'Document', _ = 'which_key_ignore' },
+  ['<leader>t'] = { name = 'Telescope', _ = 'which_key_ignore' },
   ['<leader>h'] = { name = 'More git', _ = 'which_key_ignore' },
   ['<leader>r'] = { name = 'Restart lsp server', _ = 'which_key_ignore' },
-  ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
+  ['<leader>s'] = { name = 'Search', _ = 'which_key_ignore' },
   ['<leader>w'] = { name = 'Save file', _ = 'which_key_ignore' },
   ['<leader>e'] = { name = 'File tree', _ = 'which_key_ignore' },
   ['<leader>x'] = { name = 'Diagnostics', _ = 'which_key_ignore' },
