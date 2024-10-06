@@ -50,3 +50,4 @@ vim.o.updatetime = 250
 vim.o.completeopt = 'menuone,noselect'
 
 vim.opt.swapfile = false
+vim.opt.wrap = false
