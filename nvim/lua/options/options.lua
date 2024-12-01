@@ -49,6 +49,8 @@ vim.o.updatetime = 250
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+-- For session save
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 vim.opt.swapfile = false
 vim.opt.wrap = false
