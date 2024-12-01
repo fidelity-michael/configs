@@ -1,14 +1,14 @@
 -- document existing key chains
-require('which-key').register {
-  ['<leader>c'] = { name = 'Code', _ = 'which_key_ignore' },
-  ['<leader>d'] = { name = 'Document', _ = 'which_key_ignore' },
-  ['<leader>t'] = { name = 'Telescope', _ = 'which_key_ignore' },
-  ['<leader>h'] = { name = 'More git', _ = 'which_key_ignore' },
-  ['<leader>r'] = { name = 'Restart lsp server', _ = 'which_key_ignore' },
-  ['<leader>s'] = { name = 'Search', _ = 'which_key_ignore' },
-  ['<leader>w'] = { name = 'Save file', _ = 'which_key_ignore' },
-  ['<leader>a'] = { name = 'Save/Restore Sessions', _ = 'which_key_ignore' },
-  ['<leader>e'] = { name = 'File tree', _ = 'which_key_ignore' },
-  ['<leader>x'] = { name = 'Diagnostics', _ = 'which_key_ignore' },
-  ['<leader>l'] = { name = 'Lsp', _ = 'which_key_ignore' },
-}
+require('which-key').add( {
+  {'<leader>c',  desc = 'Code'},
+  { '<leader>d', desc = 'Document'},
+  { '<leader>t', desc = 'Telescope'},
+  { '<leader>h', desc = 'More git'},
+  { '<leader>r', desc = 'Restart lsp server'},
+  { '<leader>s', desc = 'Search'},
+  { '<leader>w', desc = 'Save file'},
+  { '<leader>a', desc = 'Save/Restore Sessions'},
+  { '<leader>e', desc = 'File tree'},
+  { '<leader>x', desc = 'Diagnostics'},
+  { '<leader>l', desc = 'Lsp'},
+})
