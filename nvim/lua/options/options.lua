@@ -3,11 +3,10 @@ vim.g.maplocalleader = ' '
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.opt.termguicolors = true -- NOTE: You should make sure your terminal supports this
+vim.opt.termguicolors = true
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
--- NOTE: You can change these options as you wish!
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -20,7 +19,7 @@ vim.wo.relativenumber = true
 vim.o.softtabstop = 2
 
 -- Make tabbing smarter (will use shiftwidths when possible)
--- vim.o.smarttab = true
+vim.o.smarttab = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -33,6 +32,8 @@ vim.o.clipboard = 'unnamedplus'
 -- Enable break indent
 vim.o.breakindent = true
 vim.o.autoindent = true
+vim.o.smartindent = true
+vim.o.cindent = true
 
 -- Save undo history
 vim.o.undofile = true
@@ -54,3 +55,58 @@ vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,te
 
 vim.opt.swapfile = false
 vim.opt.wrap = false
+--[[]]
+--[[ vim.cmd("filetype plugin indent on") ]]
+--[[]]
+--[[ -- Set indent options for JSX/TSX ]]
+--[[ vim.api.nvim_create_autocmd("FileType", { ]]
+--[[   pattern = {"javascript", "typescript", "typescriptreact", "javascriptreact", "jsx", "tsx"}, ]]
+--[[   callback = function() ]]
+--[[     vim.opt_local.shiftwidth = 2 ]]
+--[[     vim.opt_local.tabstop = 2 ]]
+--[[     vim.opt_local.softtabstop = 2 ]]
+--[[     vim.opt_local.expandtab = true ]]
+--[[   end, ]]
+--[[ }) ]]
+--
+--
+--
+
+if vim.g.neovide then
+  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h10"
+  vim.g.neovide_refresh_rate = 120
+  vim.g.neovide_refresh_rate_idle = 5
+  vim.g.neovide_fullscreen = true
+  vim.g.neovide_hide_mouse_when_typing = true
+  -- vim.g.neovide_transparency = 0.5
+  -- vim.g.transparency = 0.5
+
+  vim.keymap.set('n', '<D-s>', ':w<CR>') -- Save
+  vim.keymap.set('v', '<D-c>', '"+y') -- Copy
+  vim.keymap.set('n', '<D-v>', '"+P') -- Paste normal mode
+  vim.keymap.set('v', '<D-v>', '"+P') -- Paste visual mode
+  vim.keymap.set('c', '<D-v>', '<C-R>+') -- Paste command mode
+  vim.keymap.set({'i','t'}, '<C-V>', '<ESC>l"+Pli') -- Paste insert mode
+  vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true})
+  vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true})
+  vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true})
+  vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true})
+
+  -- Fullscreen keymap
+  vim.keymap.set("n", "<C-F>", function()
+    vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
+  end)
+
+  -- Scaling keymaps
+  vim.g.neovide_scale_factor = 1.0
+  local change_scale_factor = function(delta)
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+  end
+  vim.keymap.set("n", "<C-=>", function()
+    change_scale_factor(1.25)
+  end)
+  vim.keymap.set("n", "<C-->", function()
+    change_scale_factor(1/1.25)
+  end)
+
+end
