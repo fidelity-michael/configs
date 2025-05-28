@@ -41,14 +41,14 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim', opts = {} },
 
 
-  {
+  --[[ {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
-  },
+  }, ]]
 
   { 'kaarmu/typst.vim' },
   { 'chomosuke/typst-preview.nvim' },
