@@ -99,7 +99,7 @@ return {
           capabilities = capabilities,
         }
       end,
-      ['svelte'] = function()
+      --[[ ['svelte'] = function()
         -- configure svelte server
         lspconfig['svelte'].setup {
           capabilities = capabilities,
@@ -145,6 +145,30 @@ return {
           },
         }
       end,
+      ['tsserver'] = function()
+        lspconfig['tsserver'].setup {
+          capabilities = capabilities,
+          filetypes = { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' },
+          cmd = { 'typescript-language-server', '--stdio' },
+        }
+      end,
+      ['tailwindcss'] = function()
+        lspconfig['tailwindcss'].setup {
+          capabilities = capabilities,
+          filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+          settings = {
+            tailwindCSS = {
+              experimental = {
+                classRegex = {
+                  -- for clsx and twin.macro users
+                  { 'clsx\\(([^)]*)\\)', '["\'`]([^"\'`]*).*?["\'`]' },
+                  { 'tw`([^`]*)', '([^`]*)' },
+                },
+              },
+            },
+          },
+        }
+      end, ]]
     }
   end,
 }
