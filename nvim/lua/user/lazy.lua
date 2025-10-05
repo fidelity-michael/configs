@@ -29,27 +29,7 @@ require('lazy').setup({
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
-  -- {
-  -- 	-- Theme inspired by Atom
-  -- 	'navarasu/onedark.nvim',
-  -- 	priority = 1000,
-  -- 	config = function()
-  -- 		vim.cmd.colorscheme 'onedark'
-  -- 	end,
-  -- },
-  -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
-
-
-  --[[ {
-    -- Highlight, edit, and navigate code
-    'nvim-treesitter/nvim-treesitter',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
-    },
-    build = ':TSUpdate',
-  }, ]]
-
   { 'kaarmu/typst.vim' },
   { 'chomosuke/typst-preview.nvim' },
   { 'nvim-neotest/nvim-nio' },
