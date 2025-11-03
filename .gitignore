@@ -10,3 +10,4 @@
 !/nvim/**
 
 !.backup.tmux.conf
+!.backup.zshrc
