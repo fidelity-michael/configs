@@ -8,7 +8,7 @@
 
 !/nvim/
 !/nvim/**
-!/rofi
+!/rofi/
 
 !.backup.tmux.conf
 !.backup.zshrc
