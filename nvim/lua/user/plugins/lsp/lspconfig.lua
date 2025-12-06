@@ -99,6 +99,15 @@ return {
           capabilities = capabilities,
         }
       end,
+      ['phpactor'] = function()
+        lspconfig.phpactor.setup {
+          capabilities = capabilities,
+          init_options = {
+            ['language_server_disable'] = false,
+            ['completion_worse_enabled'] = true,
+          },
+        }
+      end,
       --[[ ['svelte'] = function()
         -- configure svelte server
         lspconfig['svelte'].setup {
