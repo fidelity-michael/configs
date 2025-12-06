@@ -24,6 +24,7 @@ return {
           python = { 'isort', 'black' },
           cpp = { 'clang-format' },
           c = { 'clang-format' },
+          php = { 'pretty-php' },
         },
         -- format_on_save = {
         --   lsp_fallback = true,
